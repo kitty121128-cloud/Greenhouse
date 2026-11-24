@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2f6b4f">
+  <meta name="description" content="綠之屋餐廳介紹｜營業時間、用餐規定、公休日、支付方式、套餐與單點、完整菜單與社群帳號。">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>綠之屋｜餐廳介紹</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">綠</div>
+        <div class="brand-text">
+          <h1>綠之屋</h1>
+          <p>GREEN HOUSE KITCHEN</p>
+        </div>
+      </div>
+      <span id="openStatus" class="status" aria-live="polite">讀取營業狀態…</span>
+    </header>
+
+    <main id="main">
+      <!-- 首頁 -->
+      <section class="page active" id="home" data-page="home">
+        <div class="hero">
+          <span class="eyebrow">歡迎來到綠之屋</span>
+          <h2>把日常，<br><em>煮得很好吃。</em></h2>
+          <p>披薩、焗飯、義大利麵、小火鍋，還有一杯剛剛好的茶。<br>小小的店，專心做好每一份餐點。</p>
+          <div class="chips">
+            <span>🍕 6 吋披薩</span><span>🍲 小火鍋</span><span>🍝 焗飯・麵</span><span>🧋 下午茶</span>
+          </div>
+        </div>
+
+        <div class="section-title"><h3>一眼看懂</h3><span>Quick info</span></div>
+        <div class="quick-grid">
+          <button class="quick-card" data-go="info">
+            <span class="quick-icon">🕒</span>
+            <strong>營業時間</strong>
+            <small>週二～週五 10:30–20:00</small>
+          </button>
+          <button class="quick-card" data-go="info">
+            <span class="quick-icon">📅</span>
+            <strong>公休日</strong>
+            <small>每週六、日、一店休</small>
+          </button>
+          <button class="quick-card" data-go="info">
+            <span class="quick-icon">💵</span>
+            <strong>支付方式</strong>
+            <small>現金 / 全支付</small>
+          </button>
+          <button class="quick-card" data-go="dishes">
+            <span class="quick-icon">🍽️</span>
+            <strong>餐點選擇</strong>
+            <small>中式・焗烤・披薩</small>
+          </button>
+        </div>
+
+        <div class="cta-stack">
+          <button class="btn btn-primary" data-go="menu">📖 看完整菜單 <span>→</span></button>
+          <button class="btn btn-ghost" data-go="social">💬 追蹤我們 / 加入 LINE</button>
+        </div>
+
+        <p class="footnote">菜單為圖片版，輕觸即可放大查看。</p>
+      </section>
+
+      <!-- 營業資訊 -->
+      <section class="page" id="info" data-page="info">
+        <div class="page-head">
+          <span class="eyebrow">Information</span>
+          <h2>營業資訊</h2>
+          <p>來之前先看一眼，讓每一趟都剛剛好。</p>
+        </div>
+
+        <article class="card">
+          <div class="card-head"><span class="dot"></span><h3>營業時間</h3></div>
+          <ul class="info-list">
+            <li><span>週二 ～ 週五</span><strong>10:30 – 20:00</strong></li>
+            <li><span>最後供餐</span><strong>19:30</strong></li>
+            <li><span>下午茶時段</span><strong>14:00 – 17:00</strong></li>
+          </ul>
+        </article>
+
+        <article class="card card-rest">
+          <div class="card-head"><span class="dot dot-warn"></span><h3>休假日期</h3></div>
+          <p class="rest-big">每週 <b>六・日・一</b> 店休</p>
+          <p class="muted">其餘時間正常營業；如遇國定假日或特殊異動，請以 Facebook 粉絲專頁公告為準。</p>
+        </article>
+
+        <article class="card">
+          <div class="card-head"><span class="dot"></span><h3>用餐規定</h3></div>
+          <ul class="rule-list">
+            <li><i>✓</i><span>用完餐請先至櫃檯結帳</span></li>
+            <li><i>✓</i><span>店內不收服務費</span></li>
+            <li><i>✓</i><span>請勿攜帶外食</span></li>
+            <li><i>✓</i><span>每人需點一份餐點（最低消費依店內公告）</span></li>
+            <li><i>✓</i><span>提供外帶，最後供餐時間 19:30</span></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-head"><span class="dot"></span><h3>支付方式</h3></div>
+          <div class="pay-row">
+            <span class="pay-pill">💵 現金</span>
+            <span class="pay-pill">📲 全支付</span>
+          </div>
+          <p class="muted">僅支援現金或全支付，暫不提供信用卡及其他電子支付。</p>
+        </article>
+
+        <button class="btn btn-ghost full" data-go="menu">→ 前往菜單圖片</button>
+      </section>
+
+      <!-- 餐點介紹 -->
+      <section class="page" id="dishes" data-page="dishes">
+        <div class="page-head">
+          <span class="eyebrow">Our menu</span>
+          <h2>套餐 &amp; 單點</h2>
+          <p>一個人吃剛好，兩個人分享更快樂。</p>
+        </div>
+
+        <div class="section-title"><h3>餐點內容</h3><span>Set &amp; à la carte</span></div>
+        <div class="dish-list">
+          <article class="dish">
+            <div class="dish-emoji">🍚</div>
+            <div class="dish-body">
+              <h4>中式美食</h4>
+              <div class="option"><span class="tag">單點</span><p>三樣小菜、白飯、湯</p></div>
+              <div class="option"><span class="tag tag-set">套餐</span><p>三樣小菜、白飯、湯、不限金額飲料、布丁</p></div>
+            </div>
+          </article>
+          <article class="dish">
+            <div class="dish-emoji">🍝</div>
+            <div class="dish-body">
+              <h4>焗烤義大利麵</h4>
+              <div class="option"><span class="tag">單點</span><p>湯</p></div>
+              <div class="option"><span class="tag tag-set">套餐</span><p>不限金額飲料、布丁</p></div>
+            </div>
+          </article>
+          <article class="dish">
+            <div class="dish-emoji">🍕</div>
+            <div class="dish-body">
+              <h4>披薩、鍋燒麵、火鍋</h4>
+              <div class="option"><span class="tag tag-set">套餐</span><p>50 元內飲料，超過補差額</p></div>
+              <p class="muted">單點品項與價格請見菜單圖片。</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="footnote">實際品項與價格請以菜單圖片為準。</p>
+        <button class="btn btn-primary full" data-go="menu">📖 查看完整菜單</button>
+      </section>
+
+      <!-- 菜單圖片 -->
+      <section class="page" id="menu" data-page="menu">
+        <div class="page-head">
+          <span class="eyebrow">Menu board</span>
+          <h2>菜單</h2>
+          <p>完整品項與價格，都在這張圖裡。</p>
+        </div>
+        <button class="menu-frame" id="openMenu" aria-label="放大查看菜單圖片">
+          <img src="assets/menu.png" alt="綠之屋完整菜單圖片，包含披薩、焗飯、小火鍋、飲料與下午茶">
+        </button>
+        <p class="footnote center">🔍 輕觸圖片可全螢幕放大</p>
+      </section>
+
+      <!-- 社群 -->
+      <section class="page" id="social" data-page="social">
+        <div class="page-head">
+          <span class="eyebrow">Follow us</span>
+          <h2>社群帳號</h2>
+          <p>掃 QR Code 或點擊按鈕，就不會錯過今日限定。</p>
+        </div>
+
+        <article class="social-card">
+          <div class="social-info">
+            <div class="social-logo fb">f</div>
+            <h3>Facebook</h3>
+            <p>最新公告・公休異動・每日限定</p>
+            <a class="btn btn-small" href="https://www.facebook.com/share/1F8PfHN8ac/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">開啟 Facebook ↗</a>
+          </div>
+          <img class="qr" src="assets/qr-fb.png" alt="綠之屋 Facebook QR Code">
+        </article>
+
+        <article class="social-card">
+          <div class="social-info">
+            <div class="social-logo ig">◎</div>
+            <h3>Instagram</h3>
+            <p>餐點照片・生活日常</p>
+            <a class="btn btn-small" href="https://www.instagram.com/grho_9207?cnvx=MTUyYjNyaDRoMHluOA==" target="_blank" rel="noopener noreferrer">開啟 Instagram ↗</a>
+          </div>
+          <img class="qr" src="assets/qr-ig.png" alt="綠之屋 Instagram QR Code">
+        </article>
+
+        <article class="social-card">
+          <div class="social-info">
+            <div class="social-logo line">L</div>
+            <h3>LINE</h3>
+            <p>訂位・外帶洽詢　ID：<b>@905axunh</b></p>
+            <div class="social-actions">
+              <a class="btn btn-small" href="https://line.me/R/ti/p/@905axunh" target="_blank" rel="noopener noreferrer">加入 LINE ↗</a>
+              <button class="btn btn-small btn-outline" id="copyLine">複製 ID</button>
+            </div>
+          </div>
+          <img class="qr" src="assets/qr-line.png" alt="綠之屋 LINE QR Code">
+        </article>
+
+        <p class="footnote center">若有訂位或外帶需求，歡迎直接私訊我們。</p>
+      </section>
+    </main>
+
+    <nav class="tabbar" aria-label="主要導覽">
+      <button class="tab active" data-target="home" aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>首頁</span>
+      </button>
+      <button class="tab" data-target="info">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 15h-2v-6h2zm0-8h-2V7h2z"/></svg><span>資訊</span>
+      </button>
+      <button class="tab" data-target="dishes">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3v7a3 3 0 0 1-6 0V3h2v7a1 1 0 0 0 2 0V3zm11 0c-2.8 0-5 2.7-5 6v4h2V9h1V3zm-1 10v8h2v-8zm-8 0v8h2v-8z"/></svg><span>餐點</span>
+      </button>
+      <button class="tab" data-target="menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm2 4h10v2H7zm0 4h10v2H7zm0 4h7v2H7z"/></svg><span>菜單</span>
+      </button>
+      <button class="tab" data-target="social">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V6a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg><span>社群</span>
+      </button>
+    </nav>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="菜單圖片放大檢視" hidden>
+    <button class="lightbox-close" id="closeMenu" aria-label="關閉">✕</button>
+    <button class="lightbox-zoom" id="zoomMenu" aria-label="放大或縮小菜單">放大 2×</button>
+    <img src="assets/menu.png" alt="綠之屋完整菜單放大圖">
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
